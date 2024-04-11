@@ -662,7 +662,7 @@ footer .container .copyright span {
 }
 .signup .container form .form-content .checkbox-group {
   grid-area: terms;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .signup .container form .form-content button {
   grid-area: submit;

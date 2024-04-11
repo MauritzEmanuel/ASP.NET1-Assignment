@@ -10,18 +10,20 @@
             <h1>Sign in</h1>
             <p>Don't have an account yet? <a asp-controller="Auth" asp-action="SignUp">Sign up here</a></p>
 
+            <div class="alert">
+                @ViewData["StatusMessage"]
+            </div>
+
             <div class="form-content">
 
                 <div class="input-email input-group">
                     <label class="input-label" asp-for="Email"></label>
                     <input asp-for="Email" />
-                    <span asp-validation-for="Email"></span>
                 </div>
 
                 <div class="input-password input-group">
                     <label class="input-label" asp-for="Password"></label>
                     <input asp-for="Password" />
-                    <span asp-validation-for="Password"></span>
                 </div>
 
                 <div class="checkbox-group">
