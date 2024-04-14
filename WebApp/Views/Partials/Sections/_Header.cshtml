@@ -22,7 +22,7 @@
 
         @if (SignInManager.IsSignedIn(User))
         {
-            @User.Identity?.Name
+@*             @User.Identity?.Name *@
             <a class="btn btn-theme" asp-action="SignOut" asp-controller="Auth">Sign out</a>
         }
         else
