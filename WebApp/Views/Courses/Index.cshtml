@@ -1,4 +1,6 @@
-﻿@{
+﻿@model CoursesViewModel
+
+@{
     ViewData["Title"] = "Our Courses";
 }
 
@@ -70,7 +72,7 @@
             }
         </div>
 
-        @if (Model.Pagination != null && Model.Pagination.TotalPages > 1)
+@*         @if (Model.Pagination != null && Model.Pagination.TotalPages > 1)
         {
             <div class="pagination">
                 @for (int i = 1; i <= Model.Pagination.TotalPages; i++)
@@ -85,7 +87,7 @@
                     }
                 }
             </div>
-        }
+        } *@
 
     </div>
 </section>
