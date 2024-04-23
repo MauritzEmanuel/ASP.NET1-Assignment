@@ -9,6 +9,7 @@ namespace WebApp.Controllers
     {
         private readonly HttpClient _http = http;
         private string _categoryApiUrl = "https://localhost:7134/api/Categories";
+        private string _courseApiUrl = "https://localhost:7134/api/Courses";
 
         public async Task<IActionResult> Index()
         {
@@ -22,7 +23,13 @@ namespace WebApp.Controllers
                     viewModel.Categories = categories;
             }
 
-
+            var courseResponse = await _http.GetAsync(_courseApiUrl);
+            if (courseResponse.IsSuccessStatusCode)
+            {
+                var courses = JsonConvert.DeserializeObject<IEnumerable<Course>>(await courseResponse.Content.ReadAsStringAsync());
+                if (courses != null)
+                    viewModel.Courses = courses;
+            }
 
             return View(viewModel);
         }
