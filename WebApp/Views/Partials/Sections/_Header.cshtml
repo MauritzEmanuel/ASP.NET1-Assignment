@@ -8,6 +8,10 @@
             <a class="active" asp-action="Home" asp-controller="Default">Overview</a>
             <a asp-action="Home" asp-controller="Default">Features</a>
             <a asp-action="Contact" asp-controller="Default">Contact</a>
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <a asp-action="Index" asp-controller="Courses" class="nav-link">Courses</a>
+            }
         </nav>
 
 

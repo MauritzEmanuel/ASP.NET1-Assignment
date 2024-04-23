@@ -1,10 +1,13 @@
 ﻿using Infrastructure.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+
+    [Authorize]
     public class CoursesController(HttpClient http) : Controller
     {
         private readonly HttpClient _http = http;

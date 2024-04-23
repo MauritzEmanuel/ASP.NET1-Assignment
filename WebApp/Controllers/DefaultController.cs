@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApp.Controllers;
 
-[Authorize]
 public class DefaultController : Controller
 {
     [Route("/")]
