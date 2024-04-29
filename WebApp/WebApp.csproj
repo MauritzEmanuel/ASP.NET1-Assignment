@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Partials\Components\" />
+    <Folder Include="wwwroot\Images\Uploads\" />
   </ItemGroup>
 
   <ItemGroup>

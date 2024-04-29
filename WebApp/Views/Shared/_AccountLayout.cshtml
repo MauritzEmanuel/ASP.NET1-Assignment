@@ -7,7 +7,7 @@
         //If-sats
         @(!string.IsNullOrEmpty(ViewData["Title"]?.ToString()) ? ViewData["Title"] + " | Silicon" : "Silicon")
     </title>
-    
+
 
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
@@ -16,9 +16,21 @@
     <div class="wrapper">
         <partial name="~/Views/Partials/Sections/_Header.cshtml" />
 
-        <main>
-            @RenderBody()
-        </main>
+        <section class="account">
+            <div class="container">
+                <aside>
+                    <partial name="~/Views/Account/_AccountProfile.cshtml" />
+
+                    <nav class="account-nav">
+                        <a class="btn btn-theme active" asp-action="Details" asp-controller="Account"><i class="fa-regular fa-cog"></i>Account Details</a>
+                        <a class="btn btn-theme-secondary" asp-action="SignOut" asp-controller="Auth"><i class="fa-regular fa-arrow-right-from-bracket"></i>Sign Out</a>
+                    </nav>
+                </aside>
+                <main>
+                    @RenderBody()
+                </main>
+            </div>
+        </section>
 
         <partial name="~/Views/Partials/Sections/_Footer.cshtml" />
     </div>
