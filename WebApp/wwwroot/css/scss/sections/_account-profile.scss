@@ -3,6 +3,7 @@
     .profile {
         display: flex;
         justify-content: center;
+        flex-direction: column;
 
         .image {
             position: relative;

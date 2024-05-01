@@ -1002,6 +1002,7 @@ footer .container .copyright span {
 .account-profile .profile {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 .account-profile .profile .image {
   position: relative;
